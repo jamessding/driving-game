@@ -35,9 +35,14 @@ function startCar(event) {
 }
 
 function moveCar(event) {
-  data.x += 10;
-  if (data.x > 1550) {
-    return;
+  if (data.direction === 'east') {
+    data.x += 10;
+  } else if (data.direction === 'south') {
+    data.y += 10;
+  } else if (data.direction === 'west') {
+    data.x -= 10;
+  } else if (data.direction === 'north') {
+    data.y -= 10;
   }
   $car.style.left = data.x + 'px';
   $car.style.top = data.y + 'px';
