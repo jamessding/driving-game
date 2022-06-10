@@ -2,6 +2,7 @@
 
 var data = {
   direction: 'east',
+  start: false,
   x: 0,
   y: 0
 };

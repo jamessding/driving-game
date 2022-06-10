@@ -28,9 +28,12 @@ function DOMContentLoaded(event) {
 }
 
 function startCar(event) {
-  if (event.key === ' ') {
+  if (event.key === ' ' && data.start === false) {
     entryId = setInterval(moveCar, 16);
-
+    data.start = true;
+  } else if (event.key === ' ' && data.start === true) {
+    clearInterval(entryId);
+    data.start = false;
   }
 }
 
