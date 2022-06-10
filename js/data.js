@@ -1,7 +1,9 @@
 /* exported data */
 
 var data = {
-  direction: 'east'
+  direction: 'east',
+  x: 0,
+  y: 0
 };
 
 var previousDataJSON = localStorage.getItem('data-local-storage');
